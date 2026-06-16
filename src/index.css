@@ -1,0 +1,179 @@
+/* ===== TAILWIND V4 IMPORT ===== */
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap');
+
+/* ===== THEME CONFIGURATION ===== */
+@theme {
+  /* ---------- FONTS ---------- */
+  --font-orbitron: 'Orbitron', sans-serif;
+  --font-roboto: 'Roboto', sans-serif;
+  
+  /* Background colors */
+  --color-primary: #1A1919;           /* Main background */
+  --color-secondary: #151515;         /* Secondary/section background */
+  --color-surface: #1E1E1E;           /* Cards, surfaces */
+    --color-surfaceinner:#FFFFFF63;           /* Cards, inner box surfaces */
+
+  /* Accent colors */
+  --color-accent-red: #FF4C4C;        /* Primary accent - Buttons, LIVE, CTAs */
+  --color-accent-blue: #3B82F6;       /* Secondary accent - Hover, links, icons */
+  --color-accent-purple: #8B5CF6;     /* Highlight accent - Glows, decorative */
+  --color-accent-gold: #FFB800;       /* Gold - Upcoming badges */
+  
+  /* Text colors */
+  --color-text-primary: #FFFFFF;      /* Main headings, important text */
+  --color-text-secondary: #B3B3B3;    /* Descriptions, captions, subtext */
+  --color-text-muted: ##D9D9D9;        /* Placeholder, less important */
+  
+  /* Status colors */
+  --color-status-live: #FF4C4C;       /* LIVE indicator (using red) */
+  --color-status-upcoming: #FFB800;   /* UPCOMING (using gold) */
+  --color-status-past: #666666;       /* PAST (gray) */
+  
+  /* Border colors */
+  --color-border: #2A2A2A;            /* Borders, dividers */
+  --color-border-light: rgba(255,255,255,0.1);
+  --color-border-medium: rgba(255,255,255,0.2);
+
+  /* ---------- SPACING ---------- */
+  --spacing-26: 6.5rem;   /* 104px - Header top padding */
+  --spacing-27: 6.75rem;  /* 108px - Header left padding */
+  --spacing-18: 4.5rem;   /* 72px */
+  --spacing-22: 5.5rem;   /* 88px */
+  --spacing-30: 7.5rem;   /* 120px */
+
+  /* ---------- TYPOGRAPHY ---------- */
+  --font-size-h1: clamp(2rem, 5vw, 3rem);
+  --font-size-h2: clamp(1.5rem, 4vw, 2.25rem);
+  --font-size-h3: clamp(1.25rem, 3vw, 1.5rem);
+  --font-size-h4: 1.125rem;
+  --font-size-body-lg: 1.125rem;
+  --font-size-body: 1rem;
+  --font-size-body-sm: 0.875rem;
+  --font-size-body-xs: 0.75rem;
+
+  /* ---------- BORDER RADIUS ---------- */
+  --radius-card: 12px;
+  --radius-button: 8px;
+  --radius-badge: 20px;
+  --radius-full: 9999px;
+
+  /* ---------- BOX SHADOWS ---------- */
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.3);
+  --shadow-card-hover: 0 8px 30px rgba(255, 76, 76, 0.15);
+  --shadow-glow: 0 0 40px rgba(139, 92, 246, 0.2);
+  --shadow-button: 0 4px 15px rgba(255, 76, 76, 0.3);
+  --shadow-button-hover: 0 8px 25px rgba(255, 76, 76, 0.4);
+
+  /* ---------- BACKGROUNDS ---------- */
+  --background-image-gradient-primary: linear-gradient(135deg, #FF4C4C 0%, #8B5CF6 100%);
+  --background-image-gradient-dark: linear-gradient(180deg, #0A0A0A 0%, #151515 100%);
+  --background-image-gradient-glow: radial-gradient(circle at center, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
+}
+
+/* ===== CUSTOM GLOBAL STYLES ===== */
+@layer base {
+  html {
+    font-family: var(--font-roboto);
+    background-color: var(--color-primary);
+    color: var(--color-text-primary);
+  }
+  
+  /* ALL Headings = Orbitron */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-orbitron);
+  
+  }
+  
+  /* ALL Body text, paragraphs, subtitles = Roboto */
+  p, span, div, li, a, button, input, textarea {
+    font-family: var(--font-roboto);
+  }
+  
+  /* Override for specific elements that should be Orbitron */
+  .heading-orbitron {
+    font-family: var(--font-orbitron);
+  }
+}
+
+/* ===== UTILITY CLASSES ===== */
+@layer utilities {
+  /* Text gradient for headings */
+  .text-gradient-primary {
+    background: linear-gradient(135deg, #FF4C4C 0%, #8B5CF6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Glow effect */
+  .glow-effect {
+    box-shadow: 0 0 40px rgba(139, 92, 246, 0.2);
+  }
+  
+  /* Pulse animation for LIVE badge */
+  .animate-pulse-live {
+    animation: pulse-live 1.5s ease-in-out infinite;
+  }
+}
+
+/* ===== CUSTOM ANIMATIONS ===== */
+@keyframes pulse-live {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes pulse-dot {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.5;
+  }
+}
+
+/* ===== NAVIGATION UNDERLINE ANIMATION ===== */
+.nav-link {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 4px;
+  color: #FFFFFF;
+
+}
+
+.nav-underline {
+  position: absolute;
+  bottom: -26px;
+  left: 0;
+  height: 3px;
+  background: #FF4C4C;
+  transition: width 0.3s ease;
+  
+}
+
+.nav-link:hover .nav-underline {
+  width: 100%;
+}
+
+/* ===== ORBITRON FIGMA MATCH ===== */
+.font-orbitron {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.font-orbitron-bold {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 0%;
+}

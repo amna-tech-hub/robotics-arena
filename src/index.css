@@ -2,23 +2,23 @@
 @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap');
 
-/* ===== THEME CONFIGURATION ===== */
+/* ===== THEME CONFIG ===== */
 @theme {
   /* ---------- FONTS ---------- */
   --font-orbitron: 'Orbitron', sans-serif;
   --font-roboto: 'Roboto', sans-serif;
   
   /* Background colors */
-  --color-primary: #1A1919;           /* Main background */
+  --color-primary: #1A1919;           /* Main background  black */
   --color-secondary: #151515;         /* Secondary/section background */
   --color-surface: #1E1E1E;           /* Cards, surfaces */
     --color-surfaceinner:#FFFFFF63;           /* Cards, inner box surfaces */
 
   /* Accent colors */
-  --color-accent-red: #FF4C4C;        /* Primary accent - Buttons, LIVE, CTAs */
-  --color-accent-blue: #3B82F6;       /* Secondary accent - Hover, links, icons */
+  --color-accent-red: #FF4C4C;        /*  - Buttons, LIVE, CTAs */
+  --color-accent-blue: #3B82F6;       /* - Hover, links, icons */
   --color-accent-purple: #8B5CF6;     /* Highlight accent - Glows, decorative */
-  --color-accent-gold: #FFB800;       /* Gold - Upcoming badges */
+  --color-accent-gold: #FFB800;       /* Gold  */
   
   /* Text colors */
   --color-text-primary: #FFFFFF;      /* Main headings, important text */
@@ -85,12 +85,10 @@
     font-weight: 700!important;
   }
   
-  /* ALL Body text, paragraphs, subtitles = Roboto */
   p, span, div, li, a, button, input, textarea {
     font-family: var(--font-roboto);
   }
   
-  /* Override for specific elements that should be Orbitron */
   .heading-orbitron {
     font-family: var(--font-orbitron);
   }
@@ -98,7 +96,6 @@
 
 /* ===== UTILITY CLASSES ===== */
 @layer utilities {
-  /* Text gradient for headings */
   .text-gradient-primary {
     background: linear-gradient(135deg, #FF4C4C 0%, #8B5CF6 100%);
     -webkit-background-clip: text;
@@ -106,12 +103,10 @@
     background-clip: text;
   }
   
-  /* Glow effect */
   .glow-effect {
     box-shadow: 0 0 40px rgba(139, 92, 246, 0.2);
   }
   
-  /* Pulse animation for LIVE badge */
   .animate-pulse-live {
     animation: pulse-live 1.5s ease-in-out infinite;
   }

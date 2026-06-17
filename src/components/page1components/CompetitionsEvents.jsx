@@ -3,10 +3,10 @@ import React from "react";
 function CompetitionsEvents() {
   return (
     <section className="relative bg-[#0D0D0D] text-white py-16 px-6 md:px-16 overflow-hidden border-b border-gray-900">
-      {/* Top Right Symmetrical Glow */}
+      {/* Top Right*/}
       <div className="absolute top-[10%] right-[-20%] w-[733px] h-[733px] rounded-full bg-[#5F2F2F]/42 blur-[90px] pointer-events-none z-0" />
 
-      {/* Bottom Left Symmetrical Glow */}
+      {/* Bottom Left  */}
       <div className="absolute bottom-[-50%] left-[-35%] w-[733px] h-[733px] rounded-full bg-[#5F2F2F]/42 blur-[70px] pointer-events-none z-0" />
 
       <div className="max-w-7xl mx-auto relative z-10">
@@ -15,9 +15,9 @@ function CompetitionsEvents() {
           COMPETITIONS & EVENTS
         </h2>
 
-        {/* 3-Column Flex Layout - Equal Height */}
+        {/* 3-Column  */}
         <div className="flex flex-col md:flex-row gap-6 items-stretch">
-          {/* ================= COLUMN 1: LIVE NOW ================= */}
+          {/* ================= COLUMN 1: LIVE================= */}
           <div className="flex-1 flex flex-col">
             <h3 className="font-orbitron text-lg font-bold text-red-500 tracking-wide mb-4 uppercase">
               LIVE NOW
@@ -39,39 +39,30 @@ function CompetitionsEvents() {
                     Ongoing
                   </span>
                 </div>
-                {/* Full width border-bottom */}
                 <div className="border-b border-surfaceinner mt-3 w-full"></div>
               </div>
 
-              {/* Tournament Bracket Graphic - FIXED WIDTHS */}
               <div className="flex-1 flex items-center justify-center p-4">
                 <div className="w-[50%] space-y-8">
                   
-                  {/* Bracket Row 1 */}
                   <div className="flex items-center">
-                    {/* Left - Two Teams with FIXED width */}
                     <div className="space-y-8 w-14">
                       <div className="h-6 bg-surfaceinner rounded w-full"></div>
                       <div className="h-6 bg-surfaceinner rounded w-full"></div>
                     </div>
-                    {/* Connector Line */}
                     <div className="w-4 h-12 border-y border-r border-accent-red"></div>
                     <div className="border-y w-5 border-accent-red"></div>
-                    {/* Right - Winner Box with FIXED width */}
                     <div className="h-6 bg-surfaceinner rounded w-14 self-center"></div>
                   </div>
 
                   {/* Bracket Row 2 */}
                   <div className="flex items-center">
-                    {/* Left - Two Teams with FIXED width */}
                     <div className="space-y-8 w-14">
                       <div className="h-6 bg-surfaceinner rounded w-full"></div>
                       <div className="h-6 bg-surfaceinner rounded w-full"></div>
                     </div>
-                    {/* Connector Line */}
                     <div className="w-4 h-12 border-y border-r border-accent-red"></div>
                     <div className="border-y w-5 border-accent-red"></div>
-                    {/* Right - Winner Box with FIXED width */}
                     <div className="h-6 bg-surfaceinner rounded w-14 self-center"></div>
                   </div>
 
@@ -86,7 +77,7 @@ function CompetitionsEvents() {
             </div>
           </div>
 
-          {/* ================= COLUMN 2: UPCOMING ================= */}
+          {/* ================= COLUMN 2================= */}
           <div className="flex-1 flex flex-col">
             <h3 className="font-orbitron text-lg font-bold text-gray-300 tracking-wide mb-4 uppercase">
               UPCOMING
@@ -154,7 +145,7 @@ function CompetitionsEvents() {
             </div>
           </div>
 
-          {/* ================= COLUMN 3: PAST RESULTS ================= */}
+          {/* ================= COLUMN 3 ================= */}
           <div className="flex-1 flex flex-col">
             <h3 className="font-orbitron text-lg font-bold text-gray-300 tracking-wide mb-4 uppercase">
               PAST RESULTS

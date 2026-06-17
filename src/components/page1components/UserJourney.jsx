@@ -33,7 +33,7 @@ function UserJourney() {
     <section className="bg-[#000000] text-white py-16 px-6 md:px-16 border-b border-gray-900">
       <div className="max-w-6xl mx-auto text-center">
         
-        {/* Header Content */}
+        {/* Header*/}
         <span className="text-accent-red font-roboto font-bold text-3xl tracking-widest uppercase">
           USER JOURNEY
         </span>
@@ -44,17 +44,15 @@ function UserJourney() {
           Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
         </p>
 
-        {/* Steps Timeline Container */}
+        {/* Steps Timeline box */}
         <div className="relative flex flex-col md:flex-row items-center md:items-start justify-around gap-12 md:gap-4">
           
-          {/* Horizontal Connecting Line (Desktop Only) */}
           <div className="hidden md:block absolute top-[52px] left-[10%] right-[10%] h-[2px] bg-[#1101D4] z-0" />
 
           {/* Map through each milestone */}
           {steps.map((item, index) => (
             <div key={index} className="flex flex-col items-center flex-1 relative z-10 max-w-[200px]">
               
-              {/* Outer Circular Glow Boundary */}
               <div className="w-[104px] h-[104px] rounded-full bg-[#2D2D2D]  flex items-center justify-center shadow-[0_0_20px_rgba(37,99,235,0.2)] transition-transform duration-300 hover:scale-105 mb-6">
                 {/* Inner Circle Background */}
                 <div className="w-[76px] h-[76px] rounded-full bg-[#09090b] border border-[#1101D4] border-4   flex items-center justify-center">

@@ -32,9 +32,8 @@ function LeagueAdvantage() {
     <section className="bg-[#1A1A19] text-white py-24 px-6 md:px-16 select-none font-roboto">
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
-        {/* ================= LEFT COLUMN: ADVANTAGES LIST ================= */}
+        {/* ================= LEFT COLUMN================= */}
         <div className="lg:col-span-7 space-y-12">
-          {/* Section Headers */}
           <div>
             <span className="text-[#FF3B3B] font-orbitron text-xs font-bold! tracking-[0.25em] uppercase block mb-2">
               WHY REGISTER ?
@@ -44,7 +43,6 @@ function LeagueAdvantage() {
             </h2>
           </div>
 
-          {/* Feature Rows */}
           <div className="space-y-8">
             {advantages.map((item, index) => (
               <div key={index} className="flex gap-5 items-start max-w-xl">
@@ -53,7 +51,6 @@ function LeagueAdvantage() {
                   {item.icon}
                 </div>
 
-                {/* Content Block */}
                 <div className="space-y-1">
                   <h3 className="font-orbitron font-bold! text-base tracking-widest text-white">
                     {item.title}
@@ -67,7 +64,7 @@ function LeagueAdvantage() {
           </div>
         </div>
 
-        {/* ================= RIGHT COLUMN: LEADERBOARD IMAGE ================= */}
+        {/* ================= RIGHT COLUMN ================= */}
         <div className="lg:col-span-5 flex justify-center lg:justify-end">
           <div className="relative max-w-[480px] w-full">
             <img 

@@ -1,7 +1,6 @@
 import React from 'react';
 import botleagueimg from '../../assets/images/botleagueimage.png';
 
-// Tailored icon sets to perfectly match the design visual styles
 import { LuOrbit, LuLightbulb } from 'react-icons/lu';
 import { MdEngineering } from "react-icons/md";
 import { BiBrain } from 'react-icons/bi';
@@ -58,10 +57,8 @@ function BotLeagueDetails() {
     <section className="bg-[#1A1A19] text-white py-20 px-6 md:px-16 border-b border-gray-900 font-roboto select-none">
       <div className="max-w-6xl mx-auto">
         
-        {/* ================= TOP SECTION: WHAT IS BOTLEAGUE? ================= */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-28">
           
-          {/* Left Columns: Text Content Grid */}
           <div className="lg:col-span-8">
             <h2 className="font-orbitron text-3xl md:text-4xl font-bold tracking-wider uppercase mb-14 text-white">
               WHAT IS BOTLEAGUE?
@@ -84,7 +81,6 @@ function BotLeagueDetails() {
             </div>
           </div>
 
-          {/* Right Columns: Schematic Diagram Vector */}
           <div className="lg:col-span-4 flex justify-center lg:justify-end">
             <img 
               src={botleagueimg} 
@@ -95,22 +91,19 @@ function BotLeagueDetails() {
 
         </div>
 
-        {/* ================= BOTTOM SECTION: CATEGORIES ================= */}
+        {/* ================= BOTTOM SECTION ================= */}
         <div>
           <h2 className="font-orbitron text-3xl md:text-4xl font-bold tracking-wider uppercase mb-12 text-white">
             CATEGORIES
           </h2>
 
-          {/* 4-Card Grid Layout with Hover Transitions */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {categories.map((card, index) => (
               <div 
                 key={index} 
                 className="group relative bg-[#151515] rounded-2xl p-6 flex flex-col h-[270px] transition-all duration-300 ease-out hover:border-[#FFC700] hover:shadow-[0_0_25px_rgba(255,199,0,0.12)] hover:-translate-y-1 cursor-pointer"
               >
-                {/* Top Node Wrapper - Fixed alignment */}
                 <div className="flex-1 flex flex-col">
-                  {/* Icon Container - Centered and larger */}
                   <div className="flex items-center justify-start mb-4">
                     <div className="w-[115px] h-[105px] flex items-center justify-center transition-colors duration-300 group-hover:border-[#FFC700]/30">
                       {card.icon}
@@ -127,7 +120,6 @@ function BotLeagueDetails() {
                   </div>
                 </div>
 
-                {/* Bottom CTA Element */}
                 <div className="pt-4 mt-auto">
                   <span className="inline-flex items-center gap-2 text-[#FF3B3B] font-bold text-xs tracking-widest uppercase transition-colors duration-300 group-hover:text-red-400">
                     LEARN MORE <span className="text-sm transform transition-transform duration-300 group-hover:translate-x-1">→</span>

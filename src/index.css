@@ -82,7 +82,7 @@
   /* ALL Headings = Orbitron */
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-orbitron);
-  
+    font-weight: 700!important;
   }
   
   /* ALL Body text, paragraphs, subtitles = Roboto */

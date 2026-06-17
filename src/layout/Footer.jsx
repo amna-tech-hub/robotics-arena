@@ -1,6 +1,5 @@
 import React from 'react';
 
-// Social media vector icons matching your footer design
 import { FaYoutube, FaInstagram, FaFacebookF, FaTwitter } from 'react-icons/fa';
 
 function Footer() {
@@ -21,22 +20,20 @@ function Footer() {
   ];
 
   const socialMedias = [
-    { icon: <FaYoutube className="w-5 h-5" />, href: "#", label: "YouTube" },
-    { icon: <FaInstagram className="w-5 h-5" />, href: "#", label: "Instagram" },
-    { icon: <FaFacebookF className="w-4 h-4" />, href: "#", label: "Facebook" },
-    { icon: <FaTwitter className="w-4 h-4" />, href: "#", label: "Twitter" }
+    { icon: <FaYoutube className="w-7 h-7" />, href: "#", label: "YouTube" },
+    { icon: <FaInstagram className="w-7 h-7" />, href: "#", label: "Instagram" },
+    { icon: <FaFacebookF className="w-6 h-6" />, href: "#", label: "Facebook" },
+    { icon: <FaTwitter className="w-6 h-6" />, href: "#", label: "Twitter" }
   ];
 
   return (
     <footer className="bg-black text-white pt-16 pb-12 px-6 md:px-16 border-t border-zinc-900 select-none font-roboto">
       <div className="max-w-6xl mx-auto">
         
-        {/* Main Footer Content Layout Grid */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-6 items-start pb-12">
           
-          {/* ================= LEFT SIDE: QUICK LINKS ================= */}
           <div className="md:col-span-8 space-y-6">
-            <h4 className="font-orbitron text-xs font-bold tracking-[0.2em] text-zinc-400 uppercase">
+            <h4 className="font-orbitron  text-xl font-semibold! tracking-[0.2em] text-text-primary uppercase">
               QUICK LINKS
             </h4>
             
@@ -47,7 +44,7 @@ function Footer() {
                   <li key={idx}>
                     <a 
                       href={link.href} 
-                      className="text-zinc-500 hover:text-accent-red text-sm tracking-wide transition-colors duration-200 block"
+                      className="text-surfaceinner hover:text-accent-red text-sm tracking-wide transition-colors duration-200 block"
                     >
                       {link.name}
                     </a>
@@ -55,13 +52,13 @@ function Footer() {
                 ))}
               </ul>
 
-              {/* Column 2 Links */}
+              {/* Column 2  */}
               <ul className="space-y-3.5">
                 {quickLinksColumn2.map((link, idx) => (
                   <li key={idx}>
                     <a 
                       href={link.href} 
-                      className="text-zinc-500 hover:text-accent-red text-sm tracking-wide transition-colors duration-200 block"
+                      className="text-surfaceinner hover:text-accent-red text-sm tracking-wide transition-colors duration-200 block"
                     >
                       {link.name}
                     </a>
@@ -73,18 +70,18 @@ function Footer() {
 
           {/* ================= RIGHT SIDE: SOCIAL MEDIA ================= */}
           <div className="md:col-span-4 space-y-6 md:text-right flex flex-col md:items-end">
-            <h4 className="font-orbitron text-xs font-bold tracking-[0.2em] text-zinc-400 uppercase">
+            <h4 className="font-orbitron text-xl font-semibold! tracking-[0.2em] text-text-primary uppercase">
               SOCIAL MEDIA
             </h4>
             
-            {/* Inline Vector Group */}
-            <div className="flex gap-5 items-center">
+            {/* Inline Vector Group - LARGER ICONS */}
+            <div className="flex gap-6 items-center">
               {socialMedias.map((social, idx) => (
                 <a 
                   key={idx}
                   href={social.href}
                   aria-label={social.label}
-                  className="w-9 h-9 rounded-full bg-zinc-950 border border-zinc-900 flex items-center justify-center text-zinc-400 hover:text-white hover:border-accent-red transition-all duration-200 hover:-translate-y-0.5"
+                  className="w-12 h-12 rounded-full bg-zinc-950 border border-zinc-900 flex items-center justify-center text-surfaceinner hover:text-white hover:border-accent-red transition-all duration-200 hover:-translate-y-0.5"
                 >
                   {social.icon}
                 </a>
@@ -93,7 +90,6 @@ function Footer() {
           </div>
 
         </div>
-
 
       </div>
     </footer>
